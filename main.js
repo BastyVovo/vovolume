@@ -1,4 +1,4 @@
-import { ads } from "./data/data";
+import { ads } from "./data/data.js";
 
 const showAdButton = document.getElementById("showAdButton");
 const dialog = document.getElementById("adsTemp");
