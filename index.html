@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basty</title>
+  <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+  <div id="root">
+    <div class="conVol">
+      <div>
+        <label for="volume">Volume</label>
+        <input name="volume" id="volume" type="range" value="0" max="100"/>
+      </div>
+      <button id="showAdButton">Adjust</button>
+    </div>
+  </div>
+
+  <dialog id="adsTemp">
+    <div class="ad-overlay">
+      <button class="close-ad">✖</button>
+
+      <div class="ad-container">
+        <h2 class="ad-title"></h2>
+        <p class="ad-description"></p>
+        <button class="ad-cta" id="adCtaButton"></button>
+      </div>
+
+      <p class="countdown"></p>
+    </div>
+  </dialog>
+  <script type="module" src="./main.js" ></script>
+</body>
+</html>
