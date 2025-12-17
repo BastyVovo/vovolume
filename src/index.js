@@ -11,9 +11,14 @@ const adCta = document.querySelector(".ad-cta");
 
 let startTime = null;
 let max = 100;
-let adDuration = Math.floor(Math.random() * max);
 let countdownInterval = null;
 let elapsedTime = 0;
+
+let adDuration;
+
+function getRandomDuration() {
+  return Math.floor(Math.random() * max);
+}
 
 function getRandomAd() {
   return ads[Math.floor(Math.random() * ads.length)];
@@ -28,6 +33,8 @@ function loadAd(ad) {
 function startCountdown() {
   startTime = Date.now();
   elapsedTime = 0;
+
+  adDuration = getRandomDuration();
 
   countdownInterval = setInterval(() => {
     elapsedTime = Math.floor((Date.now() - startTime) / 1000);
